@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Đông Kinh Nghĩa Thục - Bản đồ</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css" integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js" integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg=" crossorigin=""></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css">
+    <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js" crossorigin=""></script>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="map"></div>
+    <div id="sidebar">
+      <div id="sidebar_init">
+        <h1 class="textcenter">Hội thảo - Đông Kinh Nghĩa Thục</h1>
+        <button id="start_button" class="textcenter" onclick="getStarted()">Bắt đầu</button>
+      </div>
+      <iframe name="sidebar_content"></iframe>
+    </div>
+    <div id="credit">
+      <p id="credit_text">&copy;2022 Đại học Fulbright Việt Nam</p>
+      <div id="reset_button">Reset</div>
+    </div>
+    <script type="text/javascript" src="index.js"></script>
+  </body>
+</html>
