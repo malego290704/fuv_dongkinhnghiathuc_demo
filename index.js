@@ -16,10 +16,10 @@ var default_icon = L.icon({
 
 var default_icon_red = L.icon({
   iconUrl: 'assets/red_icon.png',
-  iconSize:     [40, 70], // size of the icon
-  shadowSize:   [50, 64], // size of the shadow
-  iconAnchor:   [22, 70], // point of the icon which will correspond to marker's location
-  shadowAnchor: [4, 62],  // the same for the shadow
+  iconSize:     [60, 105], // size of the icon
+  shadowSize:   [60, 105], // size of the shadow
+  iconAnchor:   [33, 70], // point of the icon which will correspond to marker's location
+  shadowAnchor: [33, 70],  // the same for the shadow
   popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
 });
 
@@ -47,14 +47,14 @@ function clearSidebar() {
 var popup_layer_group = L.layerGroup([]).addTo(map);
 
 var marker_group = L.markerClusterGroup({
-  maxClusterRadius: 2,
+  maxClusterRadius: 20,
 });
 map.addLayer(marker_group)
 
 function getStarted() {
-  loadSidebar('lvc');
-  popup_layer_group.clearLayers().addLayer(lvc_paths);
-  map.fitBounds(lvc_paths.getBounds());
+  loadSidebar('dknt');
+  popup_layer_group.clearLayers().addLayer(dknt_paths);
+  map.flyTo(dknt_coord);
 }
 
 function getDefaultMarkerSettings(arg1) {
@@ -83,11 +83,13 @@ var nvv_coord = [21.038830, 105.848209]
 var pdt_coord = [21.031214, 105.853721]
 var tdd_coord = [10.024258, 105.088906]
 var nbh_coord = [21.016427, 105.736984]
-var vh_coord = [0, 0]
+var vh_coord = [20.96427403868188, 105.81347017222218]
 var knh_coord = [16.457339, 107.580202]
 var ld_coord = [21.023963, 105.830638]
 var nhc_coord = [21.012034, 105.838007]
 var tcc_coord = [10.008916, 105.082076]
+
+var dknt_coord = [21.03387, 105.85061]
 
 var path_lvc_pbc = L.polyline([lvc_coord, pbc_coord], getDefaultPolylineSettings())
 .bindPopup('Popup generic text');
@@ -262,3 +264,21 @@ var tcc_marker = L.marker(tcc_coord, getDefaultMarkerSettings('Trần Chánh Chi
   map.fitBounds(tcc_paths.getBounds());
 });
 marker_group.addLayer(tcc_marker);
+
+var vh_paths = L.featureGroup([]);
+var vh_marker = L.marker(vh_coord, getDefaultMarkerSettings('Võ Hoành'))
+.on('click', function(e){
+  loadSidebar('vh');
+  popup_layer_group.clearLayers().addLayer(vh_paths);
+  map.fitBounds(vh_paths.getBounds());
+});
+marker_group.addLayer(vh_marker);
+
+var dknt_paths = L.featureGroup([]);
+var dknt_marker = L.marker(dknt_coord, {title: 'Đông Kinh Nghĩa Thục', icon: default_icon_red})
+.on('click', function(e){
+  loadSidebar('dknt');
+  popup_layer_group.clearLayers().addLayer(dknt_paths);
+  map.fitBounds(dknt_paths.getBounds());
+})
+.addTo(map);
