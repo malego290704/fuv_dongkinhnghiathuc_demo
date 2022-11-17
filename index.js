@@ -2,7 +2,7 @@ var map = L.map('map').setView([21.0333, 105.8500], 8);
 
 var tiles = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}', {
     maxZoom: 12,
-    attribution: '&copy; <a href="https://www.arcgis.com/">ArcGIS Online</a>'
+    attribution: '&copy;2022 <a href="https://www.fulbright.edu.vn">Fulbright University Vietnam</a>'
 }).addTo(map);
 
 var default_icon = L.icon({
@@ -30,7 +30,7 @@ function clearWelcome() {
 
 function showWelcome() {
   document.getElementById('sidebar_init').style.display = 'block';
-  document.getElementById('sidebar').style.height = '5vh';
+  document.getElementById('sidebar').style.height = '0vh';
 }
 showWelcome();
 
