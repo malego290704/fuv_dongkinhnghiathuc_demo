@@ -42,14 +42,16 @@ iframe {
 #reset_button {
   padding: 4px 8px;
   position: absolute;
-  right: 4px;
-  bottom: 4px;
-  font-size: 0.4em;
-  display: none;
+  right: 1vh;
+  top: 1vh;
+  font-size: 1em;
+  display: block;
+  background-color: #CEEDF6;
 }
 
 #reset_button:hover {
   background-color: #00196E;
+  color: #CEEDF6;
 }
 
 .textcenter {

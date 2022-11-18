@@ -132,7 +132,7 @@ var pctA_marker = L.marker(pctA_coord, getDefaultMarkerSettings('Phan Chu Trinh 
 .on('click', function(e){
   loadSidebar('pctA');
   popup_layer_group.clearLayers().addLayer(pct_paths);
-  map.flyToBounds(pct_paths.getBounds());
+  //map.flyToBounds(pct_paths.getBounds());
 });
 marker_group.addLayer(pctA_marker);
 
@@ -140,7 +140,7 @@ var pctB_marker = L.marker(pctB_coord, getDefaultMarkerSettings('Phan Chu Trinh 
 .on('click', function(e){
   loadSidebar('pctB');
   popup_layer_group.clearLayers().addLayer(pct_paths);
-  map.flyToBounds(pct_paths.getBounds());
+  //map.flyToBounds(pct_paths.getBounds());
 });
 marker_group.addLayer(pctB_marker);
 
@@ -187,7 +187,7 @@ var pct_marker = L.marker(pct_coord, getDefaultMarkerSettings('Phan Châu Trinh'
 .on('click', function(e){
   loadSidebar('pct');
   popup_layer_group.clearLayers().addLayer(pct_paths);
-  map.flyToBounds(pct_paths.getBounds());
+  //map.flyToBounds(pct_paths.getBounds());
 });
 marker_group.addLayer(pct_marker);
 
